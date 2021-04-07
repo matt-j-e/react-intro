@@ -1,18 +1,24 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Dropdown = (props) => {
+const Dropdown = ({ title, options }) => {
     const isOpen = false;
     return (
         <div>
-        <button>{props.title}</button>
+        <button>{title}</button>
         <ul>
             {  
-                // isOpen ? props.options.map((option, i) => <li key={i}>{option}</li>) : ''
-                isOpen && props.options.map((option, i) => <li key={i}>{option}</li>)
+                // isOpen ? options.map((option, i) => <li key={i}>{option}</li>) : ''
+                isOpen && options.map((option, i) => <li key={i}>{option}</li>)
             }
         </ul>
         </div>
     )
+}
+
+Dropdown.propTypes = {
+    title: PropTypes.string.isRequired,
+    options: PropTypes.array.isRequired,
 }
 
 export default Dropdown;
