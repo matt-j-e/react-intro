@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   const name = "Matt";
-  const dropdown = {title: "List of options", options: ['Option 1', 'Option 2', 'Option 3']};
+  const dropdown = {title: "List of options", options: [{ id: 1, label: 'Option 1' }, { id: 2, label: 'Option 2'}, { id: 3, label: 'Option 3'}]};
   return (
     <div className="App">
       <Header name={name}/>
